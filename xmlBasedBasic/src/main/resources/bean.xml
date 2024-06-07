@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd">
+    <!--    creating the bean for address class on which the student class is depend -->
+    <bean name="address" class="example.Address">
+<!--        <constructor-arg value="62"/>-->
+<!--        <constructor-arg value="Noida"/>-->
+<!--        <constructor-arg value="UP"/>-->
+        <property name="sector" value="2"/>
+        <property name="city" value="Noida"/>
+        <property name="state" value="UP"/>
+    </bean>
+    <!--    creating the bean for Student class -->
+    <bean name="student" class="example.Student">
+        <!--   injecting by constructor-->
+<!--        <constructor-arg value ="21"/>-->
+<!--        <constructor-arg value ="Shivam"/>-->
+<!--        <constructor-arg ref="address"/>-->
+        <!--   injecting by properties(i.e by setter)-->
+        <property name="age" value="21"/>
+        <property name="name" value="Shivam"/>
+        <property name="address" ref="address"/>
+    </bean>
+
+
+</beans>

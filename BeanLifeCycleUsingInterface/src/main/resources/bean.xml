@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd">
+<bean name="book" class="example.Book" init-method="init" destroy-method="destroy">
+    <property name="price" value="100"/>
+</bean>
+    <bean name="notebook" class="example.NoteBook">
+        <property name="price" value="200"/>
+    </bean>
+
+
+</beans>
+
+

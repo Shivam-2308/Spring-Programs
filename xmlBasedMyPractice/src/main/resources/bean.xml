@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd">
+    <bean name="college" class="example.College">
+                <constructor-arg value="21"/>
+                <constructor-arg value="JSS College"/>
+        <!--        <property name="college_Id" value="21"/>-->
+        <!--        <property name="college_name" value="JSS College"/>-->
+    </bean>
+    <bean name="student" class="example.Student">
+                <constructor-arg value="10"/>
+                <constructor-arg value="Shivam"/>
+                <constructor-arg ref="college"/>
+        <!--        <property name="roll_num" value="01"/>-->
+        <!--        <property name="name" value="Shivam"/>-->
+        <!--        <property name="college" ref="college"/>-->
+    </bean>
+
+</beans>
